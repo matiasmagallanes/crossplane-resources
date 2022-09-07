@@ -1,0 +1,17 @@
+apiVersion: storage.gcp.crossplane.io/v1alpha3
+kind: Bucket
+metadata:
+  name: test-bucket-cuca-83745
+  namespace: crossplane-old
+  labels:
+    created-by: "crossplane"
+    environment: "test"
+  annotations:
+    crossplane.io/external-name: test-bucket-cuca-83745
+spec:
+  location: US-CENTRAL1
+  storageClass: STANDARD
+  versioningEnabled: false
+  deletionPolicy: Orphan
+  providerConfigRef:
+    name: default
