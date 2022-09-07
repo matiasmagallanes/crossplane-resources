@@ -1,0 +1,18 @@
+apiVersion: database.gcp.crossplane.io/v1beta1
+kind: CloudSQLInstance
+metadata:
+  name: migration-postgres
+spec:
+  forProvider:
+    databaseVersion: POSTGRES_12
+    region: us-central1
+    settings:
+      activationPolicy: ALWAYS
+      backupConfiguration:
+        enabled: true
+        startTime: 07:00
+      dataDiskSizeGb: 10
+      dataDiskType: PD_SSD
+      tier: db-custom-1-3840
+  providerConfigRef:
+    name: default
