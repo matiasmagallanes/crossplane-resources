@@ -13,5 +13,8 @@ spec:
   storageClass: STANDARD
   versioningEnabled: false
   deletionPolicy: Orphan
+  labels:
+    created-by: "crossplane"
+    environment: "test"
   providerConfigRef:
     name: default
