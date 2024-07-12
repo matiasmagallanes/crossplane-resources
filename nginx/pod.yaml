@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: nginx
+    app: cuca
   name: nginx
 spec:
   containers:
